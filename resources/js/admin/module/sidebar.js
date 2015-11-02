@@ -1,10 +1,10 @@
 /*-----------------------------------------------------------------------------
-* @Description:     左侧导航
+* @Description:     侧边栏导航
 * @Version:         1.0.0
-* @author:          hujun(435043636@qq.com)
-* @date             2015.11.1
+* @author:          daiqiaoling(1649500603@qq.com)
+* @date             2015.11.02
 * ==NOTES:=============================================
-* v1.0.0(2015.11.25):
+* v1.0.0(2015.11.02):
      初始生成
 * ---------------------------------------------------------------------------*/
 KISSY.add('module/sidebar',function(S, Core){
@@ -22,7 +22,8 @@ KISSY.add('module/sidebar',function(S, Core){
  	var
         DOM = S.DOM, get = DOM.get, query = DOM.query, next = DOM.next,
         on = S.Event.on, delegate = S.Event.delegate,
-        $ = S.all,
+        // $ = S.all,
+        config = {},
         el = {
             // 菜单
             sidebarEl: '.J_sidebar',
@@ -31,7 +32,7 @@ KISSY.add('module/sidebar',function(S, Core){
             //二级菜单
             layer_2_menu: '.second-layer-menu',
             //三级菜单
-            layer_3_menu: '.third-layer-menu',
+            // layer_3_menu: '.third-layer-menu',
             //菜单列表
             menu_list: '.page-sidebar-menu > li'
         },
@@ -39,9 +40,9 @@ KISSY.add('module/sidebar',function(S, Core){
         ACTIVE = 'active',
         OPEN = 'open';
 
-    function Core(){
+    function Core(param){
+        this.opts = S.merge(config, param);
         this._init();
-        S.log(1);
     }
 
     S.augment(Core,{
@@ -73,14 +74,15 @@ KISSY.add('module/sidebar',function(S, Core){
         _foldMenu: function(e){
             var
                 that = this,
-                otherLi = DOM.siblings(e, 'li'),
+                otherLi = DOM.siblings(e, 'li');
+
             S.each(otherLi, function(item){
                 if(DOM.hasClass(otherLi, OPEN)){
                         DOM.removeClass(OPEN);
                         DOM.find('ul').removeClass(OPEN);
                         DOM.find('ul').slideUp(200);
                 }
-            })
+            });
         },
         /**
          * 事先将已经是active的菜单展开
