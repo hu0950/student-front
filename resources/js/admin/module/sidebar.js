@@ -47,14 +47,15 @@ KISSY.add('module/sidebar',function(S, Core){
         _bulidEvt: function(){
             var
                 that = this
-                LEVEL_1_MENU = $(el.level_1_menu),
+                LEVEL_1_MENU = $(el.level_1_menu).children('a'),
                 subMenu = $(el.subMenuEl);
 
             $(el.subMenuEl).hide();
 
-            S.each(LEVEL_1_MENU,function(li){
-                on(li,'click',function(e){
-                    that._toggle(li);
+            S.each(LEVEL_1_MENU,function(a){
+                on(a,'click',function(e){
+                    that._toggle(a);
+                    return false;
                 });
             });
         },
