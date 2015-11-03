@@ -26,7 +26,11 @@ KISSY.add('module/sidebar',function(S, Core){
         config = {},
         el = {
             // 菜单
-            sidebarEl: '.J_sidebar'
+            sidebarEl: '.J_sidebar',
+            //一级菜单项
+            level_1_menu: '.J_menu-li',
+            //二级菜单列表
+            subMenuEl: '.J_subMenu'
         },
         ACTIVE = 'active',
         OPEN = 'open';
@@ -43,24 +47,35 @@ KISSY.add('module/sidebar',function(S, Core){
         _bulidEvt: function(){
             var
                 that = this
-                menu_list = $(el.sidebarEl).children();
+                LEVEL_1_MENU = $(el.level_1_menu),
+                subMenu = $(el.subMenuEl);
 
-            S.each(menu_list,function(elem){
-                on(elem,'click',function(e){
-                    e.stopPropagation();
-                    that._toggle(e.target);
+            $(el.subMenuEl).hide();
+
+            S.each(LEVEL_1_MENU,function(li){
+                on(li,'click',function(e){
+                    that._toggle(li);
                 });
             });
         },
         _toggle: function(ev){
             var 
                 that = this,
-                menu_li = $(ev).parent('li'),
-                sub_menu = DOM.next(ev,'ul');
+                li = $(ev),
+                subMenu = li.children('ul');
 
-            S.log(menu_li);
-
-        }        
+            if(!li.hasClass(ACTIVE)){
+                li.addClass(ACTIVE);
+                subMenu.show();
+                subMenu.addClass(ACTIVE);
+            }else{
+                if(!subMenu.hasClass(ACTIVE)){                
+                    li.removeClass(ACTIVE);
+                    subMenu.hide();
+                    subMenu_li.removeClass(ACTIVE);
+                }
+            }
+        }
     });
     return Core;
  },{
