@@ -18,22 +18,19 @@ KISSY.add('module/sidebar',function(S, Core){
     ]
 });
 
- KISSY.add('sidebar/detail',function(S){
+KISSY.add('sidebar/detail',function(S){
  	var
         DOM = S.DOM, get = DOM.get, query = DOM.query, next = DOM.next,
         on = S.Event.on, delegate = S.Event.delegate,
         // $ = S.all,
         config = {},
         el = {
-            // 菜单
-            sidebarEl: '.J_sidebar',
             //一级菜单项
             level_1_menu: '.J_menu-li',
             //二级菜单列表
             subMenuEl: '.J_subMenu'
         },
-        ACTIVE = 'active',
-        OPEN = 'open';
+        ACTIVE = 'active';
 
     function Core(param){
         this.opts = S.merge(config, param);
@@ -50,6 +47,7 @@ KISSY.add('module/sidebar',function(S, Core){
                 LEVEL_1_MENU = $(el.level_1_menu).children('a'),
                 subMenu = $(el.subMenuEl);
 
+            //打开页面时，将子列表隐藏
             $(el.subMenuEl).hide();
 
             S.each(LEVEL_1_MENU,function(a){
@@ -59,22 +57,28 @@ KISSY.add('module/sidebar',function(S, Core){
                 });
             });
         },
+        /*
+        **点击一级菜单项时，切换显示子列表
+        */
         _toggle: function(ev){
             var 
                 that = this,
-                li = $(ev),
-                subMenu = li.children('ul');
+                li = $(ev).parent('li')
+                siblingLi = li.siblings('li'),
+                siblingUl = siblingLi.children('ul'),
+                subMenu = $(ev).next('ul'),
+                subMenuLi = subMenu.children('li');
 
             if(!li.hasClass(ACTIVE)){
                 li.addClass(ACTIVE);
                 subMenu.show();
-                subMenu.addClass(ACTIVE);
+                subMenuLi.addClass(ACTIVE);
+                siblingLi.removeClass(ACTIVE);
+                siblingUl.hide();
             }else{
-                if(!subMenu.hasClass(ACTIVE)){                
-                    li.removeClass(ACTIVE);
-                    subMenu.hide();
-                    subMenu_li.removeClass(ACTIVE);
-                }
+                li.removeClass(ACTIVE);
+                subMenu.hide();
+                subMenuLi.removeClass(ACTIVE);
             }
         }
     });

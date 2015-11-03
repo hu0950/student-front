@@ -207,7 +207,7 @@ form .requires{
 {
     display: block;
     height: 38px;
-    width:229px;
+    width:230px;
     line-height: 15px;
 }
 .sidebar li > a ,.sidebar > li > a:hover
@@ -222,9 +222,9 @@ form .requires{
     width: 230px;
     min-height: 600px;
     background-color: #436E90;
-    border-right: 1px solid #436E90;
+    /*border-right: 1px solid #436E90;*/
 }
-/*.sidebar > li.active > a:after {
+.sidebar > li.active > a:after {
     width: 0px;
     height: 0px;
     border-style: solid;
@@ -235,7 +235,7 @@ form .requires{
     top: 50%;
     margin-top: -9px;
     right: 0px;
-}*/
+}
 .sidebar li > a {
     position: relative;
 }
@@ -249,7 +249,7 @@ form .requires{
 .sidebar > li.active > a ,.sidebar > li > a:hover{
     background-color: rgba(0, 0, 0, 0.3);
     color: #F0F0F0;
-    width: 229px;
+    width: 230px;
 }
 .sidebar.nav-pills > li > a {
     border-radius: 0 !important;
@@ -257,7 +257,8 @@ form .requires{
 }
 .sidebar.nav-pills > li.active > a,
 .sidebar.nav-pills > li.active > a:hover,
-.sidebar.nav-pills > li.active > a:focus {
+.sidebar.nav-pills > li.active > a:focus,
+.highlight{
     background-color: rgba(0, 0, 0, 0.3);
     color: #F0F0F0;
 }
