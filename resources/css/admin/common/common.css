@@ -203,7 +203,7 @@ form .requires{
 
 /*******************************siderbar start*********************/
 
-.sidebar li > a ,.sidebar > li > a:hover,.sub-menu li > a ,.sub-menu > li > a:hover
+.sidebar li > a ,.sidebar > li > a:hover,.sub-menu > li > a ,.sub-menu > li > a:hover
 {
     display: block;
     height: 38px;

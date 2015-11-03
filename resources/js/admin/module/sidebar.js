@@ -26,9 +26,7 @@ KISSY.add('module/sidebar',function(S, Core){
         config = {},
         el = {
             // 菜单
-            sidebarEl: '.J_sidebar',
-            //菜单列表
-            menu_list: '.page-sidebar-menu > li'
+            sidebarEl: '.J_sidebar'
         },
         ACTIVE = 'active',
         OPEN = 'open';
@@ -44,13 +42,25 @@ KISSY.add('module/sidebar',function(S, Core){
         },
         _bulidEvt: function(){
             var
-                that = this;
-            // on(el.menu_list, 'click', function(e){
-            //     e.stopPropagation();
-            //     that._toggle(this);
-            // });
-            
-        },        
+                that = this
+                menu_list = $(el.sidebarEl).children();
+
+            S.each(menu_list,function(elem){
+                on(elem,'click',function(e){
+                    e.stopPropagation();
+                    that._toggle(e.target);
+                });
+            });
+        },
+        _toggle: function(ev){
+            var 
+                that = this,
+                menu_li = $(ev).parent('li'),
+                sub_menu = DOM.next(ev,'ul');
+
+            S.log(menu_li);
+
+        }        
     });
     return Core;
  },{
