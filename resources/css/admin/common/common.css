@@ -257,8 +257,7 @@ form .requires{
 }
 .sidebar.nav-pills > li.active > a,
 .sidebar.nav-pills > li.active > a:hover,
-.sidebar.nav-pills > li.active > a:focus,
-.highlight{
+.sidebar.nav-pills > li.active > a:focus {
     background-color: rgba(0, 0, 0, 0.3);
     color: #F0F0F0;
 }
@@ -284,7 +283,7 @@ form .requires{
     top: 12px;
 }
 .sidebar > li li.active{
-    background-color: rgba(0, 0, 0, 0.1);
+    background-color: rgba(0, 0, 0, 0.2);
 }
 hr {
     margin-top: 10px;

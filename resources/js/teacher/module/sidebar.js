@@ -8,7 +8,7 @@
      初始生成
 * ---------------------------------------------------------------------------*/
 KISSY.add('module/sidebar',function(S, Core){
-    PW.namespace('module.sidebar');
+	PW.namespace('module.sidebar');
     PW.module.sidebar = function(){
         new Core();
     }     
@@ -19,7 +19,7 @@ KISSY.add('module/sidebar',function(S, Core){
 });
 
 KISSY.add('sidebar/detail',function(S){
-    var
+ 	var
         DOM = S.DOM, get = DOM.get, query = DOM.query, next = DOM.next,
         on = S.Event.on, delegate = S.Event.delegate,
         // $ = S.all,
@@ -84,8 +84,8 @@ KISSY.add('sidebar/detail',function(S){
     });
     return Core;
  },{
-    requires:[
-        'core'
-    ]
+ 	requires:[
+ 		'core'
+ 	]
  });
 

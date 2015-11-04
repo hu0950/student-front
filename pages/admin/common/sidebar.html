@@ -1,6 +1,6 @@
-<!-- <nav class="J_sidebar">	 -->
-	<ul class="nav nav-pills sidebar pull-left" id="sidebar">
-        <li class="J_menu-li highlight">
+<!-- <nav class="J_sidebar">     -->
+    <ul class="nav nav-pills sidebar pull-left" id="sidebar">
+        <li class="J_menu-li">
             <a href="javascript:;">
                 <i class="fa fa-th"></i> 
                 <span>学生信息管理</span> 
@@ -10,36 +10,68 @@
             </a>
             <ul class="sub-menu J_subMenu active">
                 <li>
-                    <a href="javascript:;"><span>基础信息</span></a>
+                    <a href="javascript:;"><span>基础信息管理</span></a>
                 </li>
                 <li>
-                    <a href="javascript:;"><span>身体状况信息</span></a>
+                    <a href="javascript:;"><span>健康状况信息管理</span></a>
                 </li>
             </ul>
         </li>
-        <li class="J_menu-li highlight">
+        <li class="J_menu-li">
             <a href="javascript:;">
                 <i class="fa fa-th"></i> 
-                <span>系统信息管理</span> 
+                <span>课程信息管理</span>
+            </a>
+        </li>        
+        <li class="J_menu-li">
+            <a href="javascript:;">
+                <i class="fa fa-th"></i> 
+                <span>成绩信息管理</span>
+            </a>
+        </li>
+        <li class="J_menu-li">
+            <a href="javascript:;">
+                <i class="fa fa-th"></i> 
+                <span>学院基本信息管理</span>
+                <span class="angle pull-right">
+                    <i class="fa fa-angle-right"></i>
+                </span>
+            </a>
+            <ul class="sub-menu J_subMenu active">
+                <li>
+                    <a href="javascript:;"><span>学院信息管理</span></a>
+                </li>
+                <li>
+                    <a href="javascript:;"><span>系信息管理</span></a>
+                </li>
+                <li>
+                    <a href="javascript:;"><span>班级信息管理</span></a>
+                </li>
+            </ul>
+        </li>
+        <li class="J_menu-li">
+            <a href="javascript:;">
+                <i class="fa fa-th"></i> 
+                <span>教职工信息管理</span> 
                 <span class="angle pull-right">
                     <i class="fa fa-angle-right"></i>
                 </span>
             </a>
             <ul class="sub-menu J_subMenu">
                 <li>
-                    <a href="javascript:;"><span>二级菜单</span></a>
+                    <a href="javascript:;"><span>管理员权限管理</span></a>
                 </li>
                 <li>
-                    <a href="javascript:;"><span>二级菜单</span></a>
+                    <a href="javascript:;"><span>辅导员权限管理</span></a>
                 </li>
             </ul>
         </li>
     </ul>
 <!-- </nav> -->
 <script type="text/javascript">
-	KISSY.ready(function(S){
-		S.use('module/sidebar , widget/ext',function(S){
-			PW.module.sidebar();
-		});
-	});
+    KISSY.ready(function(S){
+        S.use('module/sidebar , widget/ext',function(S){
+            PW.module.sidebar();
+        });
+    });
 </script>
