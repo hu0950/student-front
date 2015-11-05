@@ -85,29 +85,12 @@
         },
         //地址信息
         url:{
-            // 菜品管理
-            dishManagement: {
-                dishManagement: {
-                    // 删除菜品
-                    delDish: site.staticWebsite + 'mock/admin/dish.json',
-                    // 发送菜品分类联动id
-                    sendClassLinkage: site.staticWebsite + 'mock/admin/big-classify.json',
-                    // 发送计量单位联动id
-                    sendUnitLinkage: site.staticWebsite + 'mock/admin/small-classify.json',
-                    // 获取原材料
-                    getIngredient: site.staticWebsite + 'mock/admin/ingredient-list.json',
-                    // 删除原材料
-                    delIngredient: site.staticWebsite + 'mock/admin/ingredient-list.json'
-                }
-            },
-            // 基本信息管理
-            baseInfoManagement: {
-                //搜索风向标
-                searchVane: {
-                    //添加菜品标签
-                    addOrder: site.staticWebsite + 'mock/admin/add-order.json',
-                    //删除菜品标签
-                    delOrder: site.staticWebsite + 'mock/admin/del-order.json'
+            //学生信息管理
+            StudentInfoManagement: {
+                //基本信息管理
+                baseInfoManagement: {
+                    //删除学生
+                    delStudent: site.staticWebsite + 'mock/admin/del-student.json'
                 }
             },
             login: {

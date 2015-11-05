@@ -1,40 +1,49 @@
 KISSY.add('pio/student-info-management/base-info-management', function(S){
 
-    var urls,
-        conn = PW.mod.Connector(_pw_apiData);
+    var urls;
 
     try{
-        urls = conn.StudentInfoManagement;
+        urls = PW.Env.url.StudentInfoManagement.baseInfoManagement;
     }catch(e){
         S.log('地址信息错误');
         return;
     }
 
-    PW.namespace('io.StudentInfoManagement');
+    PW.namespace('io.StudentInfoManagement.baseInfoManagement');
     
-    S.mix(PW.io.StudentInfoManagement, {
+    S.mix(PW.io.StudentInfoManagement.baseInfoManagement, {
         conn: urls,
         /**
-         * 点击删除时，发送当前学生id
+         * 发送所删除菜品的id
          * @param  {[type]}   data     [description]
          * @param  {Function} callback [description]
          * @return {Boolean}           [description]
          */
         delStudent: function(data, callback){
-            var
-                BaseInfoManagementIO = urls.delStudent;
-
-            BaseInfoManagementIO.io(data, function(rs){
-                callback(
-                    rs.code == 0,
-                    rs.errMsg
-                );
-            });
-        }
+            S.IO({      
+                url: urls.delStudent,
+                type: 'get',
+                // type: 'delete',
+                dataType: 'json',
+                data: data,
+                cache: false,
+                success: function(rs){
+                    callback(
+                        rs.code == 0,
+                        rs.errMsg
+                    );
+                },
+                error: function(err){
+                    callback(
+                        false,
+                        PW.Env.msg[0]
+                    )
+                }
+            })
+        }       
     })
 },{
     requires:[
-        'mod/ext',
-        'mod/connector'
+        'mod/ext'
     ]
 })

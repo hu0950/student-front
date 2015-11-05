@@ -332,11 +332,11 @@
 }
 .pw-dlg-theme-white .dlg-footer button:first-child {
   margin-right: 0;
- background: none repeat scroll 0 0 #4f8edc;
+ background: none repeat scroll 0 0 #436E90;
  color:#fff;
 }
 .pw-dlg-theme-white .dlg-footer button:first-child:hover{
-  background-color: #2d78d5;
+  background-color: #436E90;
 }
 /*white alert*/
 .pw-dlg-theme-white .dlg-alert{
@@ -436,7 +436,7 @@
 }
 .pw-dlg-theme-white-confirm .dlg-footer button:first-child {
   margin-right: 20px;
- background: none repeat scroll 0 0 #4d90fe;
+ background: none repeat scroll 0 0 #436E90;
  color:#fff;
 }
 /**************************** blue button confirm  end****************************/

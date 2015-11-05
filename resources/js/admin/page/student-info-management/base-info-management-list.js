@@ -14,16 +14,16 @@ KISSY.add('page/student-info-management/base-info-management-list', function(S, 
 	}
 },{
 	requires: [
-		'vip-management/list'
+		'base-info-management-list/list'
 	]
 });
 /*---------------------------------------------------------------------------*/
-KISSY.add('vip-management/list', function(S){
+KISSY.add('base-info-management-list/list', function(S){
 	var
         DOM = S.DOM, get = DOM.get, query = DOM.query, $ = S.all,
         on = S.Event.on, delegate = S.Event.delegate,        
         Pagination = PW.mod.Pagination,
-        StudentInfoManagementIO = PW.io.StudentInfoManagement,
+        baseInfoManagementIO = PW.io.StudentInfoManagement.baseInfoManagement,
         Dialog = PW.widget.Dialog,
         config = {
         	pagi: {
@@ -43,7 +43,12 @@ KISSY.add('vip-management/list', function(S){
         	// 删除触发器
         	delTrigger: '.J_del'
         },
-        DATA_STUDENT_ID = 'data-student-id';
+        DATA_STUDENT_ID = 'data-student-id',
+        TIP = [
+        '确定删除该学生吗？',
+        '删除成功！',
+        '删除失败！'
+        ];
 
 	function List(param){
 		this.opts = S.merge(config, param);
@@ -115,16 +120,16 @@ KISSY.add('vip-management/list', function(S){
         			id: studentId
         		};
         	
-        	// Dialog.confirm(TIP[0], function(){
-	        //     StudentInfoManagementIO.delStudent(info, function(rs, errMsg){
-	        //         if(rs){
-	        //             Dialog.alert(TIP[1]);
-	        //             that._reloadPagi();
-	        //         }else{
-	        //         	Dialog.alert(TIP[2]);
-	        //         }
-	        //     });
-	        // });
+        	Dialog.confirm(TIP[0], function(){
+	            baseInfoManagementIO.delStudent(info, function(rs, errMsg){
+	                if(rs){
+	                    Dialog.alert(TIP[1]);
+	                    that._reloadPagi();
+	                }else{
+	                	Dialog.alert(TIP[2]);
+	                }
+	            });
+	        });
 		}
 	});
 	return List;
