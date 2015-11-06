@@ -1,0 +1,119 @@
+<!doctype html>
+<html>
+	<head>
+		<title>基本信息管理</title>
+		<!--#include file="/pages/admin/common/head.html"-->
+		<link rel="stylesheet" href="/resources/css/admin/student-info-management/student-info-management.css" />
+	</head>
+	<body>
+		<!--#include file="/pages/admin/common/header.html"-->
+		<div class="page clearfix">
+			<!--#include file="/pages/admin/common/sidebar.html"-->
+			<div class="holder">
+				<div class="container">
+					<div class="row">
+						<div class="col-sm-12">
+							<ol class="breadcrumb">
+								<li><a href="#"><i class="fa fa-home"></i>&nbsp;管理员</a></li>
+								<li><a href="#">学生信息管理</a></li>
+								<li class="active">基本信息管理</li>
+							</ol>
+						</div>
+						<div class="col-sm-12">
+							<div class="panel panel-default">
+								<div class="panel-heading">
+									<h4>编辑学生基本信息</h4>
+								</div>
+								<form class="form-horizontal" action="" method="">
+									<div class="panel-body">
+										<div class="form-group">
+											<div class="col-sm-1 col-sm-offset-3">
+												<label class="control-label">学号</label>
+											</div>
+											<div class="col-sm-3">
+												<input type="text" class="form-control" name="studentId" value="">
+										    </div>
+										</div>
+										<div class="form-group">
+											<div class="col-sm-1 col-sm-offset-3">
+												<label class="control-label">姓名</label>
+											</div>
+											<div class="col-sm-3">
+												<input type="text" class="form-control" name="name" value="">
+										    </div>
+										</div>
+										<div class="form-group">
+											<div class="col-sm-1 col-sm-offset-3">
+												<label class="control-label">性别</label>
+											</div>
+											<div class="col-sm-3">
+												<input type="text" class="form-control" name="sex" value="">
+										    </div>
+										</div>
+										<div class="form-group">
+											<div class="col-sm-1 col-sm-offset-3">
+												<label class="control-label">所属班级</label>
+											</div>
+											<div class="col-sm-3">
+												<input type="text" class="form-control" name="class" value="">
+										    </div>
+										</div>
+										<div class="form-group">
+											<div class="col-sm-1 col-sm-offset-3">
+												<label class="control-label">所属系</label>
+											</div>
+											<div class="col-sm-3">
+												<input type="text" class="form-control" name="department" value="">
+										    </div>
+										</div>
+										<div class="form-group">
+											<div class="col-sm-1 col-sm-offset-3">
+												<label class="control-label">所属学院</label>
+											</div>
+											<div class="col-sm-3">
+												<input type="text" class="form-control" name="school" value="">
+										    </div>
+										</div>
+										<div class="form-group">
+											<div class="col-sm-1 col-sm-offset-3">
+												<label class="control-label">生日</label>
+											</div>
+											<div class="col-sm-3">
+												<input type="text" class="form-control" name="birthday" value="">
+										    </div>
+										</div>
+										<div class="form-group">
+											<div class="col-sm-1 col-sm-offset-3">
+												<label class="control-label">籍贯</label>
+											</div>
+											<div class="col-sm-3">
+												<input type="text" class="form-control" name="hometown" value="">
+										    </div>
+										</div>
+										<div class="form-group">
+											<div class="col-sm-1 col-sm-offset-3">
+												<label class="control-label">兴趣</label>
+											</div>
+											<div class="col-sm-3">
+												<input type="text" class="form-control" name="interest" value="">
+										    </div>
+										</div>
+									</div>
+									<div class="row foot">
+							      		<div class="col-sm-6 col-sm-offset-4">
+							      			<div class="btn-toolbar">
+								      			<button class="btn-primary btn save" type="submit"><i class="fa fa-save"></i>&nbsp;保存</button>
+								      			<button class="btn-primary btn" type="reset"><i class="fa fa-undo"></i>&nbsp;重置</button>
+							      			</div>
+							      		</div>
+							      	</div>
+								</form>
+							</div>
+						</div>
+					</div><!-- row -->
+				</div><!-- container -->
+			</div><!-- holder -->
+		</div><!-- page -->		
+			<!--#include file="/pages/admin/common/footer.html"-->
+	</body>
+</html>

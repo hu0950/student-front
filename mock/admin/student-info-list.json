@@ -1,8 +1,0 @@
-{
-	"code": 0,
-	"list": [
-		{"studentId":"2011012508", "name":"代巧玲","sex":"女", "class":"软件1班", "department":"软件工程", "school":"信息与软件工程学院", "birthday":"1992-01-01", "hometown":"山西省朔州市", "interest":"睡觉"},
-		{"studentId":"2015102809", "name":"代巧玲","sex":"女", "class":"软件1班", "department":"软件工程", "school":"信息与软件工程学院", "birthday":"1992-01-01", "hometown":"山西省朔州市", "interest":"敲代码"}
-	],
-	"dataCount": 25
-}
