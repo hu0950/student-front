@@ -90,7 +90,7 @@ form .requires{
 }
 .admin-nav.navbar{
 	min-height: 40px;
-	background-color: #DBDBDB; 
+	background-color: #436E90; 
     border-color: #191a1d;
     margin-bottom: 0;
 }
@@ -102,34 +102,37 @@ form .requires{
 	font-weight: bold;
 	line-height: 40px;
 	height: 40px;
-    color: #525252;
+    color: #F0F0F0;
     width: 190px;
     font-family: "Righteous";
     text-align: center;
 }
+.logo-text i {
+    margin: 0 10px;
+}
 .logo-text:hover,
 .logo-text:focus{
 	text-decoration: none;
-    color:blue;
+    color:#F0F0F0;
 }
-.hello-administrator{
+.hello{
 	height: 40px;
 	line-height: 40px;
     padding-right: 15px;
 }
-.admin-nav.navbar .left-toggle{
+/*.admin-nav.navbar .left-toggle{
 	display: inline-block;
 	width: 40px;
 	height: 40px;
 	line-height: 40px;
     color: #dedede;
-}
+}*/
 .navbar-default .navbar-nav > li > a {
-     color: #dedede; 
+     color: #F0F0F0; 
 }
 .admin-nav.navbar .menu-list:link {
-	color: #dedede;
-}		/* 未访问的链接 */
+	color: #f0f0f0;
+}	/* 未访问的链接 */
 .admin-nav.navbar .menu-list:visited {
 	color: #fff;
 }	/* 已访问的链接 */
@@ -139,20 +142,21 @@ form .requires{
 .admin-nav.navbar .menu-list:active {
 	color: #fff;
 }
-.admin-nav.navbar .navbar-nav > li.active{
+/*.admin-nav.navbar .navbar-nav > li.active{
 	background-color: #000;
-}
+}*/
 .navbar-default .navbar-nav > .active > a, 
 .navbar-default .navbar-nav > .active > a:hover, 
 .navbar-default .navbar-nav > .active > a:focus {
     color: #fff;
-    background-color: #000;
+    /*background-color: #000;*/
 }
 .admin-nav.navbar .menu-list{
 	line-height: 40px;
 	height: 40px;
 	padding: 0 15px;
 	display: block;
+    margin-right: 10px;
 }
 .navbar-nav > li > .dropdown-menu {
     margin-top: 0;
@@ -164,7 +168,7 @@ form .requires{
     top: 100%;
     left: 0;
     z-index: 1000;
-    display: none; 
+    /*display: block; */
     float: left;
     min-width: 160px;
     padding: 5px 0;
@@ -193,10 +197,6 @@ form .requires{
 }
 .admin-nav .dropdown-menu a{
 	padding: 5px 20px;
-}
-.administrator{
-	width: 25px;
-	padding-top: 10px;
 }
 
 /*****************管理员面板头部样式end**************************/
@@ -257,7 +257,8 @@ form .requires{
 }
 .sidebar.nav-pills > li.active > a,
 .sidebar.nav-pills > li.active > a:hover,
-.sidebar.nav-pills > li.active > a:focus {
+.sidebar.nav-pills > li.active > a:focus,
+.sub-menu li.active a:focus {
     background-color: rgba(0, 0, 0, 0.3);
     color: #F0F0F0;
 }

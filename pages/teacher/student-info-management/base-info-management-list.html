@@ -1,27 +1,28 @@
 <!doctype html>
 <html>
 	<head>
-		<title>课程信息管理</title>
-		<!--#include file="/pages/admin/common/head.html"-->
-		<link rel="stylesheet" href="/resources/css/admin/student-info-management/student-info-management.css" />
+		<title>基本信息管理</title>
+		<!--#include file="/pages/teacher/common/head.html"-->
+		<link rel="stylesheet" href="/resources/css/teacher/student-info-management/student-info-management.css" />
 	</head>
 	<body>
-		<!--#include file="/pages/admin/common/header.html"-->
+		<!--#include file="/pages/teacher/common/header.html"-->
 		<div class="page clearfix">
-			<!--#include file="/pages/admin/common/sidebar.html"-->
+			<!--#include file="/pages/teacher/common/sidebar.html"-->
 			<div class="holder">
 				<div class="container">
 					<div class="row">
 						<div class="col-sm-12">
 							<ol class="breadcrumb">
-								<li><a href="#"><i class="fa fa-home"></i>&nbsp;管理员</a></li>
-								<li class="active">课程信息管理</li>
+								<li><a href="#"><i class="fa fa-home"></i>&nbsp;辅导员</a></li>
+								<li><a href="#">学生信息管理</a></li>
+								<li class="active">基本信息管理</li>
 							</ol>
 						</div>
 						<div class="col-sm-12">
 							<div class="panel panel-default">
 								<div class="panel-heading">
-									<h4>课程信息列表</h4>
+									<h4>学生基本信息列表</h4>
 									<a class="btn btn-primary add" href="#"><i class="fa fa-plus"></i>&nbsp;添加</a>
 								</div>
 								<div class="panel-body">
@@ -42,23 +43,29 @@
 										<table class="table table-hover table-bordered">
 											<thead>
 												<tr>
-													<th>课程编号</th>
-													<th>课程名称</th>
-													<th>课时</th>
-													<th>学分</th>
-													<th>授课教师</th>
-													<th>授课地点</th>
+													<th>学号</th>
+													<th>姓名</th>
+													<th>性别</th>
+													<th>所属班级</th>
+													<th>所属系</th>
+													<th>所属学院</th>
+													<th>生日</th>
+													<th>籍贯</th>
+													<th>兴趣</th>
 													<th>操作</th>
 												</tr>
 											</thead>
 											<tbody>
-												<tr>
-									    			<td>1</td>
-									    			<td>Java程序设计</td>
-									    			<td>30</td>
-									    			<td>3</td>
-									    			<td>周东岱</td>
-									    			<td>314</td>
+												<tr data-student-id="2011012508">
+									    			<td>2011012508</td>
+									    			<td>代巧玲</td>
+									    			<td>女</td>
+									    			<td>软件1班</td>
+									    			<td>软件工程</td>
+									    			<td>信息与软件工程学院</td>
+									    			<td>1992-01-01</td>
+									    			<td>山西省朔州市</td>
+									    			<td>敲代码</td>
 									    			<td>
 									    				<a class="btn btn-primary btn-xs" href="#"><i class="fa fa-pencil"></i>&nbsp;编辑</a>
 									    				<a class="btn btn-primary btn-xs J_del" href="javascript:;"><i class="fa fa-times"></i>&nbsp;删除</a>
