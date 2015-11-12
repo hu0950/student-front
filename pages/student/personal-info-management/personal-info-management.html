@@ -1,0 +1,119 @@
+<!doctype html>
+<html>
+	<head>
+		<title>个人信息管理</title>
+		<!--#include file="/pages/student/common/head.html"-->
+		<link rel="stylesheet" href="/resources/css/teacher/student-info-management/student-info-management.css" />
+	</head>
+	<body>
+		<!--#include file="/pages/student/common/header.html"-->
+		<div class="page clearfix">
+			<!--#include file="/pages/student/common/sidebar.html"-->
+			<div class="holder">
+				<div class="container">
+					<div class="row">
+						<div class="col-sm-12">
+							<ol class="breadcrumb">
+								<li><a href="#"><i class="fa fa-home"></i>&nbsp;学生</a></li>
+								<li class="active">个人信息管理</li>
+							</ol>
+						</div>
+						<div class="col-sm-12">
+						<div id="accordion" class="accordion-style1 panel-group">
+							<div class="panel-group">
+								<div class="panel panel-default">
+									<div class="panel-heading">
+										<h4 class="panel-title">
+											<a class="accordion-toggle" data-toggle="collapse" href="#collapseOne">
+											个人基础信息
+											</a>
+										</h4>
+									</div>
+									<div class="panel-collapse collapse in" id="collapseOne">
+										<div class="panel-body">
+											<table class="table table-hover table-bordered">
+											<thead>
+												<tr>
+													<th>学号</th>
+													<th>姓名</th>
+													<th>性别</th>
+													<th>所属班级</th>
+													<th>所属系</th>
+													<th>所属学院</th>
+													<th>生日</th>
+													<th>籍贯</th>
+													<th>兴趣</th>
+													<th>操作</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr data-student-id="2011012508">
+									    			<td>2011012508</td>
+									    			<td>代巧玲</td>
+									    			<td>女</td>
+									    			<td>软件1班</td>
+									    			<td>软件工程</td>
+									    			<td>信息与软件工程学院</td>
+									    			<td>1992-01-01</td>
+									    			<td>山西省朔州市</td>
+									    			<td>敲代码</td>
+									    			<td>
+									    				<a class="btn btn-primary btn-xs" href="#"><i class="fa fa-pencil"></i>&nbsp;修改兴趣</a>
+									    			</td>
+									    		</tr>
+											</tbody>
+										</table>
+										</div>
+									</div>
+								</div>
+								<div class="panel panel-default">
+									<div class="panel-heading">
+										<h4 class="panel-title">
+											<a class="accordion-toggle" data-toggle="collapse" href="#collapseTwo">
+											健康状况信息
+											</a>
+										</h4>
+									</div>
+									<div class="panel-collapse collapse in" id="collapseTwo">
+										<div class="panel-body">
+											<table class="table table-hover table-bordered">
+											<thead>
+												<tr>
+													<th>身高</th>
+													<th>体重</th>
+													<th>营养状况</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+									    			<td>173</td>
+									    			<td>60</td>
+									    			<td>良好</td>
+									    		</tr>
+											</tbody>
+										</table>
+										</div>
+									</div>
+								</div>	
+							</div>
+						</div>					
+							<!-- 面板结束 end-->
+						</div>
+					</div><!-- row -->
+				</div><!-- container -->
+			</div><!-- holder -->
+		</div><!-- page -->		
+			<!--#include file="/pages/admin/common/footer.html"-->
+		<script type="text/javascript" src="../../../resources/tool/bootstrap/js/bootstrap.js"></script>
+		<script type="text/javascript">
+			$(document).ready(function(){
+				$('.J_del').click(function(){
+					var 
+						tr = $(this).parent().parent();
+
+					tr.remove();
+				});
+			});
+		</script>
+	</body>
+</html>
