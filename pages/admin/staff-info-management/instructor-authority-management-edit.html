@@ -24,7 +24,7 @@
 								<div class="panel-heading">
 									<h4>编辑辅导员权限</h4>
 								</div>
-								<form class="form-horizontal" action="" method="">
+								<form id="defaultForm" class="form-horizontal" action="" method="">
 									<div class="panel-body">
 										<div class="form-group">
 											<div class="col-sm-1 col-sm-offset-3">
@@ -47,7 +47,7 @@
 												<label class="control-label">所属班级</label>
 											</div>
 											<div class="col-sm-3">
-												<input type="text" class="form-control" name="className" value="">
+												<input type="text" class="form-control" name="nameOfClass" value="">
 										    </div>
 										</div>
 										<div class="form-group">
@@ -83,5 +83,58 @@
 			</div><!-- holder -->
 		</div><!-- page -->		
 			<!--#include file="/pages/admin/common/footer.html"-->
+		<script type="text/javascript">
+			$(document).ready(function() {
+			    $('#defaultForm')
+			        .bootstrapValidator({
+			            feedbackIcons: {
+			                valid: 'glyphicon glyphicon-ok',
+			                invalid: 'glyphicon glyphicon-remove',
+			                validating: 'glyphicon glyphicon-refresh'
+			            },
+			            fields: {
+			                userName: {
+			                    validators: {
+			                        notEmpty: {
+			                            message: '用户名不能为空'
+			                        }
+			                    }
+			                },
+			                name: {
+			                    validators: {
+			                        notEmpty: {
+			                            message: '姓名不能为空'
+			                        }
+			                    }
+			                },
+			                nameOfClass: {
+			                    validators: {
+			                        notEmpty: {
+			                            message: '所属班级不能为空'
+			                        }
+			                    }
+			                },
+			                departName: {
+			                    validators: {
+			                        notEmpty: {
+			                            message: '所属系不能为空'
+			                        }
+			                    }
+			                },
+			                schoolName: {
+			                    validators: {
+			                        notEmpty: {
+			                            message: '所属学院不能为空'
+			                        }
+			                    }
+			                }
+			            }
+			        })
+			        .on('success.form.bv', function(e) {
+			            var $form = $(e.target);
+			            $form[0].submit();
+			        });
+			});
+		</script>
 	</body>
 </html>
